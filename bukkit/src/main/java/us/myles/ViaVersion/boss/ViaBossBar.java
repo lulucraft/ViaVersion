@@ -12,20 +12,20 @@ public class ViaBossBar extends CommonBoss<Player> {
     }
 
     @Override
-    public BossBar addPlayer(Player player) {
+    public BossBar<Player> addPlayer(Player player) {
         addPlayer(player.getUniqueId());
         return this;
     }
 
     @Override
-    public BossBar addPlayers(Player... players) {
+    public BossBar<Player> addPlayers(Player... players) {
         for (Player p : players)
             addPlayer(p);
         return this;
     }
 
     @Override
-    public BossBar removePlayer(Player player) {
+    public BossBar<Player> removePlayer(Player player) {
         removePlayer(player.getUniqueId());
         return this;
     }
